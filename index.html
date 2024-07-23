@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquerysINDEX.css">
+
+<body>
+
+    <div class="contenido">
+        <header>
+            <h1 class="logo">Tecmark</h1>
+            <nav>
+
+            </nav>
+        </header>
+        <main>
+            <section class="seleccion-articulos-mobile">
+                <button onclick="abrirMenu()" class="open-menu">
+                    <i class="bi bi-list"></i></button>
+            </section>
+            <section id="nosotros" class="first-part">
+                <div class="first-part-text">
+                    <h1>TECMARK</h1>
+                    <h5>
+                        Somos un equipo de apasionados dedicados a proporcionar los mejores componentes de computadora,
+                        inspirando y motivando a nuestros clientes a alcanzar el máximo rendimiento y eficiencia en sus
+                        proyectos tecnológicos.
+                    </h5>
+                </div>
+            </section>
+            <section class="seleccion-articulos">
+                <ul class="seleccion-articulos-lista">
+                    <li>
+                        <button onclick="activarTab(this)" id="todos" class="boton-menu boton-categoria active"><i
+                                class="bi bi-card-list"></i>Todos</button>
+                    </li>
+                    <li>
+                        <button onclick="activarTab(this)" id="auriculares" class="boton-menu boton-categoria"><i
+                                class="bi bi-headset"></i>Auriculares</button>
+                    </li>
+                    <li>
+                        <button onclick="activarTab(this)" id="mouse" class="boton-menu boton-categoria"><i
+                                class="bi bi-mouse2"></i>Mouse</button>
+                    </li>
+                    <li>
+                        <button onclick="activarTab(this)" id="teclados" class="boton-menu boton-categoria"><i
+                                class="bi bi-keyboard"></i>Teclados</button>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito" href="/carrito.html">
+                            <i class="bi bi-cart"></i>Carrito<span id="cantidad" class="cantidad">0</span></a>
+                    </li>
+                </ul>
+            </section>
+            <div class="contenedor-articulos">
+                <h2 class="titulo-principal" id="tituloPrincipal">Todos los articulos</h2>
+                <div id="contenedorProductos" class="articulos">
+                </div>
+            </div>
+            <section id="contactanos" class="fifth-part">
+                <div class="contact">
+                    <div class="contact-container">
+                        <div class="contact-image">
+                            <img src="../img/contactanos/contactanos.webp" alt="" />
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-tittle">
+                                <h4>CONTACTANOS</h4>
+                                <p>Dejanos tu consulta o sugerencia</p>
+                            </div>
+                            <div class="contact-form">
+                                <div class="contact-form-name">
+                                    <label>Nombre:</label>
+                                    <input type="text" placeholder="Nombre" />
+                                </div>
+                                <div class="contact-form-lastname">
+                                    <label>Apellido:</label>
+                                    <input type="text" placeholder="Apellido" />
+                                </div>
+                                <div class="contact-form-phone">
+                                    <label>Telefono:</label>
+                                    <input type="number" placeholder="Numero" />
+                                </div>
+                                <div class="contact-form-email">
+                                    <label>Correo:</label>
+                                    <input type="email" placeholder="Tu Email" />
+                                </div>
+                                <div class="contact-form-text">
+                                    <label>Mensaje:</label>
+                                    <textarea placeholder="Escribe tu mensaje"></textarea>
+                                </div class="contact-form-send">
+                                <div class="contact-form-send">
+                                    <input type="submit" placeholder="ENVIAR" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p class="texto-footer">© Tomas Jorajuria</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

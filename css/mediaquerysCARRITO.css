@@ -1,0 +1,49 @@
+@media screen and (max-width: 800px) {
+  .boton-menu {
+    font-size: 0.7rem;
+  }
+
+  .carrito-articulo p,
+  h3 {
+    font-size: 0.7rem;
+  }
+
+  .carrito-acciones-vaciar {
+    font-size: 0.7rem;
+  }
+
+  .carrito-acciones-comprar {
+    font-size: 0.7rem;
+  }
+
+  .carrito-acciones-der {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .boton-menu {
+    font-size: 0.5rem;
+  }
+
+  .titulo-principal {
+    padding-top: 20px;
+    font-size: 1rem;
+  }
+
+  .carrito-articulo-cantidad p {
+    padding-left: 40%;
+  }
+
+  .carrito-acciones-total {
+    padding: 10px;
+  }
+
+  .carrito-acciones-comprar {
+    padding: 10px;
+  }
+
+  .carrito-acciones-vaciar {
+    padding: 10px;
+  }
+}

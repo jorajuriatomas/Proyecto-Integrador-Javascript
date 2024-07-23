@@ -1,0 +1,410 @@
+@import url('linkhref="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"');
+
+:root {
+  --verde-oscuro: #198754;
+  --gris: #e2e2e2;
+  --verde: #28a745;
+  --blanco: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+textarea {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  align-items: center;
+}
+.contenido {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--blanco);
+  color: var(--verde);
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  background-color: var(--verde);
+}
+
+
+.first-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.6), rgb(0 0 0 / 0.6)),
+    url("../img/portada/fondo-tecnologia-lineas-verdes.jpg");
+  background-color: var(--negro);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  gap: 100px;
+}
+
+.first-part-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  margin-top: 30px;
+}
+
+.first-part-text h1 {
+  font-size: 72px;
+  font-weight: 600;
+  width: 680px;
+  text-align: center;
+}
+
+.first-part-text h5 {
+  font-size: 30px;
+  margin: 25px 20% 0;
+  color: var(--gris);
+}
+
+.contenedor-articulos {
+  background-color: var(--blanco);
+  margin: 2%;
+  margin-top: 0;
+  border-radius: 1.5rem;
+  padding: 2%;
+}
+
+.seleccion-articulos {
+  padding: 5px 5%;
+  padding-bottom: 0;
+  background-color: var(--verde);
+  margin: 0 5%;
+}
+
+.seleccion-articulos-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.titulo-principal {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.seleccion-articulos-mobile{
+  display: none;
+}
+
+.boton-menu {
+  display: flex;
+  background-color: transparent;
+  border: 0;
+  color: var(--blanco);
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 10px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.boton-menu.active {
+  background-color: var(--blanco);
+  color: var(--verde);
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.boton-carrito {
+  color: var(--blanco);
+}
+
+.cantidad {
+  background-color: var(--blanco);
+  color: var(--verde);
+  padding: 0rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.articulos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.articulo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.articulo-imagen {
+  width: 230px;
+  height: 200px;
+  align-items: center;
+  border: 3px solid;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding-top: 5px;
+}
+
+.articulo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 0.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin-top: -0.3rem;
+  position: relative;
+  width: 230px;
+  text-align: center;
+}
+
+.articulo-nombre {
+  font-size: 1rem;
+}
+
+.articulo-compra {
+  border: 0;
+  background-color: var(--blanco);
+  color: var(--verde);
+  padding: 0.5rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: 2px solid var(--blanco);
+  transition: backgrund-color 0.2s, color 0.2s;
+}
+
+.articulo-compra:hover {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+.contenedor-compras {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.carrito-articulos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carrito-articulo {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gris);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.carrito-articulo-imagen {
+  width: 4rem;
+  border-radius: 1rem;
+}
+
+.carrito-articulo small {
+  font-size: 0.75rem;
+}
+
+.carrito-articulo h3 {
+  font-weight: lighter;
+}
+
+.carrito-articulo-eliminar {
+  border: none;
+  background-color: transparent;
+  color: var(--verde-oscuro);
+  cursor: pointer;
+}
+
+.carrito-acciones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito-acciones-vaciar {
+  border: 0;
+  background-color: var(--gris);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--verde);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.carrito-acciones-comprar {
+  border: 0;
+  background-color: var(--verde);
+  padding: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: var(--blanco);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.carrito-acciones-der {
+  display: flex;
+}
+
+.carrito-acciones-total {
+  display: flex;
+  background-color: var(--gris);
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  color: var(--verde);
+  text-transform: uppercase;
+  gap: 1rem;
+}
+
+.disabled {
+  display: none;
+}
+
+
+.fifth-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  width: 1140px;
+  margin: 30px 0;
+}
+
+.contact-container {
+  display: flex;
+  background: var(--blanco);
+  color: var(--verde-oscuro);
+  height: auto;
+}
+
+.contact-image {
+  width: 50%;
+}
+
+.contact-image img {
+  display: flex;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-info {
+  width: 50%;
+  padding: 40px 0 40px 40px;
+}
+
+.contact-tittle {
+  font-size: 25px;
+}
+
+.contact-tittle p {
+  color: var(--verde);
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.contact-form,
+.contact-form-lastname,
+.contact-form-phone,
+.contact-form-email,
+.contact-form-text {
+  margin-top: 25px;
+}
+
+.contact-form-name label,
+.contact-form-lastname label,
+.contact-form-phone label,
+.contact-form-email label,
+.contact-form-text label {
+  display: block;
+  padding: 10px 0;
+}
+
+.contact-form-name input,
+.contact-form-lastname input,
+.contact-form-phone input,
+.contact-form-email input {
+  display: block;
+  padding: 10px 0;
+  width: 90%;
+  text-decoration: none;
+  border: none;
+  background-color: var(--gris);
+}
+
+.contact-form-text textarea {
+  width: 90%;
+  border: none;
+  background-color: var(--gris);
+  height: 80px;
+}
+
+.contact-form-send {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90%;
+  margin-top: 25px;
+}
+
+.contact-form-send input {
+  background-color: var(--gris);
+  text-transform: uppercase;
+  background-image: none;
+  font-weight: 700;
+  padding: 10px;
+  width: 30%;
+}
+
+.contact-form-send input:hover {
+  background-color: var(--verde-oscuro);
+}
