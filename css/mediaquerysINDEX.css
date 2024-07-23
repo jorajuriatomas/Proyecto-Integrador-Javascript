@@ -40,6 +40,15 @@
 
 @media screen and (max-width: 800px) {
   
+  header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: var(--blanco);
+    width: 100%;
+    z-index: 9;
+  }
+
   .first-part{
     height: 500px;
   }
@@ -67,6 +76,7 @@
     opacity: 0;
     visibility: hidden;
     transition: .2s;
+  
   }
 
   .menu {
@@ -110,18 +120,12 @@
     align-content: center;
   }
 
-  .seleccion-articulos-mobile {
-    display: flex;
-    justify-content: end;
-    padding: 1rem 1.5rem;
-    align-items: center;
-  }
-
-  .seleccion-articulos-mobile .logo {
-    color: var(--gris);
+  .logo{
+    font-size: 30px;
   }
 
   .open-menu {
+    display: block;
     background-color: transparent;
     border: 0;
     font-size: 40px;

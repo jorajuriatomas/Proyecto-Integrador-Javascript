@@ -37,7 +37,7 @@ a {
 li {
   align-items: center;
 }
-.contenido {
+body {
   display: grid;
   grid-template-columns: 1fr;
   background-color: var(--blanco);
@@ -48,10 +48,15 @@ header {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+  min-height: 77px;
 }
 
 main {
   background-color: var(--verde);
+}
+
+.open-menu {
+  display: none;
 }
 
 
