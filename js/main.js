@@ -156,6 +156,13 @@ const botonesCategorias = document.querySelectorAll('.boton-categoria');
 const tituloPrincipal = document.getElementById('tituloPrincipal');
 let botonesAgregar = document.querySelector('.articulo-compra');
 const cantidad = document.getElementById('cantidad');
+const nombre = document.getElementById('nombre');
+const apellido = document.getElementById('apellido');
+const telefono = document.getElementById('telefono');
+const correo = document.getElementById('correo');
+const mensaje = document.getElementById('mensaje');
+const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const botonEnviar = document.getElementById('enviar');
 
 function cargarProductos(productosElegidos) {
   contenedorProductos.innerHTML = '';
@@ -226,4 +233,66 @@ function actualizarCantidadDeCompras() {
   cantidad.innerHTML = productosEnCarrito.reduce((total, producto) => total + producto.cantidad, 0);
 }
 
+const showError = (input, message) => {
+  const formField = input.parentElement;
+  formField.classList.add('error');
+  const error = formField.querySelector('small');
+  error.style.display = 'block';
+  error.textContent = message;
+  return false ;
+}
+
+const showSuccess = (input) => {
+  const formField = input.parentElement;
+  formField.classList.remove('error');
+  const error = formField.querySelector('small');
+  error.style.display = 'none';
+  return true;
+}
+
+const checkInputNyA = (input) => {
+  if (input.value.trim().length < 3 || input.value.trim().length > 25) 
+    return showError(input, 'El campo debe tener entre 3 y 25 caracteres');
+  return showSuccess(input);
+};
+
+const checkInputText = (input) => {
+  if (input.value.trim().length < 3) 
+    return showError(input, 'El campo debe tener al menes 3 caracteres');
+  return showSuccess(input);
+};
+
+const checkInputNumber = (input) => {
+  if (input.value.trim().length < 7 || input.value.trim().length > 15) 
+    return showError(input, 'El campo debe ser un número válido');
+  return showSuccess(input);
+};
+
+const checkInputEmail = (input) => {
+  if (!emailValido.test(input.value)) 
+    return showError(input, 'El campo debe ser un email válido');
+  return showSuccess(input);
+};
+
+const validateForm = () => {
+  let isValid = true;
+
+  if (!checkInputNyA(nombre)) isValid = false;
+  if (!checkInputNyA(apellido)) isValid = false;
+  if (!checkInputText(mensaje)) isValid = false;
+  if (!checkInputNumber(telefono)) isValid = false;
+  if (!checkInputEmail(correo)) isValid = false;
+
+  return isValid;
+};
+
+botonEnviar.addEventListener('click', (event) => {
+  event.preventDefault();
+  const formIsValid = validateForm();
+  if (formIsValid) {  
+    alert('Formulario enviado con éxito.');
+  } else {
+    alert('Por favor, complete correctamente el formulario.');
+  }
+}); 
 

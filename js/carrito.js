@@ -20,7 +20,6 @@ function cargarProductosCarrito() {
       div.innerHTML = `
      <img class="carrito-articulo-imagen" src="${producto.imagen}" alt="${producto.titulo}">
       <div class="carrito-articulo-nombre">
-          <small>Titulo</small>
           <h3>${producto.titulo}</h3>
       </div>
       <div class="carrito-articulo-cantidad">
@@ -28,12 +27,12 @@ function cargarProductosCarrito() {
           <p>${producto.cantidad}</p>
       </div>
       <div class="carrito-articulo-costo">
-          <small>Costo</small>
-          <p>${producto.precio}</p>
+          <small>Costo:</small>
+          <p>$${producto.precio}</p>
       </div>
       <div class="carrito-artiuclo-subtotal">
-          <small>Subtotal</small>
-          <p>${producto.precio * producto.cantidad}</p>
+          <small>Subtotal:</small>
+          <p>$${producto.precio * producto.cantidad}</p>
       </div>
       <button onclick="eliminarDelCarrito(this)" id=${producto.id} class="carrito-articulo-eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
               class="bi bi-trash" viewBox="0 0 16 16">
@@ -58,7 +57,6 @@ function cargarProductosCarrito() {
 cargarProductosCarrito();
 
 function eliminarDelCarrito(e) {
-  console.log(e);
   const productoAEliminar = productosEnCarritoSeleccionados.find(producto => producto.id === e.id);
   const index = productosEnCarritoSeleccionados.indexOf(productoAEliminar);
   productosEnCarritoSeleccionados.splice(index, 1);

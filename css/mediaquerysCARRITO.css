@@ -22,6 +22,48 @@
 }
 
 @media screen and (max-width: 480px) {
+  
+  .carrito-articulo{
+    grid-template-columns: repeat(6, 2fr);
+  }
+
+  .carrito-articulos {
+    text-align: center;
+  }
+
+  
+  .carrito-articulo-imagen{
+    grid-row: 1 / span 2; 
+  }
+
+  .carrito-articulo-nombre{
+    grid-column: 2 / span 2;
+  }
+
+  .carrito-articulo-costo{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+  
+  }
+
+  .carrito-artiuclo-subtotal{
+    grid-column: -4 / span 2;
+  }
+
+  .carrito-articulo-cantidad{
+    grid-column: -6 / span 2;
+  }
+/*   .carrito-articulo-cantidad{
+    grid-column: 4 / span 2; (aca va el costo)
+    grid-column: -6 / span 2; (aca va cantidad)
+  } */
+
+  .carrito-articulo-eliminar{
+    grid-row: 1 / span 2; 
+    grid-column: 6 / span 1;
+  }
+
   .boton-menu {
     font-size: 0.5rem;
   }
@@ -29,10 +71,6 @@
   .titulo-principal {
     padding-top: 20px;
     font-size: 1rem;
-  }
-
-  .carrito-articulo-cantidad p {
-    padding-left: 40%;
   }
 
   .carrito-acciones-total {

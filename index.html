@@ -61,7 +61,7 @@
                         <div class="contact-image">
                             <img src="../img/contactanos/contactanos.webp" alt="" />
                         </div>
-                        <div class="contact-info">
+                        <form class="contact-info">
                             <div class="contact-tittle">
                                 <h4>CONTACTANOS</h4>
                                 <p>Dejanos tu consulta o sugerencia</p>
@@ -69,29 +69,34 @@
                             <div class="contact-form">
                                 <div class="contact-form-name">
                                     <label>Nombre:</label>
-                                    <input type="text" placeholder="Nombre" />
+                                    <input id="nombre" type="text" placeholder="Nombre" />
+                                    <small></small>
                                 </div>
                                 <div class="contact-form-lastname">
                                     <label>Apellido:</label>
-                                    <input type="text" placeholder="Apellido" />
+                                    <input id="apellido" type="text" placeholder="Apellido" />
+                                    <small></small>
                                 </div>
                                 <div class="contact-form-phone">
                                     <label>Telefono:</label>
-                                    <input type="number" placeholder="Numero" />
+                                    <input id="telefono" type="number" placeholder="Numero" />
+                                    <small></small>
                                 </div>
                                 <div class="contact-form-email">
                                     <label>Correo:</label>
-                                    <input type="email" placeholder="Tu Email" />
+                                    <input id="correo" type="email" placeholder="Tu Email" />
+                                    <small></small>
                                 </div>
                                 <div class="contact-form-text">
                                     <label>Mensaje:</label>
-                                    <textarea placeholder="Escribe tu mensaje"></textarea>
+                                    <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+                                    <small></small>
                                 </div class="contact-form-send">
                                 <div class="contact-form-send">
-                                    <input type="submit" placeholder="ENVIAR" />
+                                    <input id="enviar" type="submit" placeholder="ENVIAR" />
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </section>
